@@ -7,11 +7,10 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface AccountDao extends JpaRepository<Account, String> {
+public interface AccountDao extends JpaRepository<Account, String>{
 
-    @Query(value = "select * from accounts WHERE FK_USER=:user",nativeQuery = true)
+    @Query(value = "SELECT * FROM accounts WHERE FK_USER=:user", nativeQuery = true)
     List<Account> getAllAccountsPerUser(@Param("user") String user);
-    //Definiamo il valore della query
 
-    List<Account> findByFKUser(String fkUser); //named query, specifichiamo nel nome quello che vogliamo
+    List<Account> findByfkUser(String fkUser);
 }
