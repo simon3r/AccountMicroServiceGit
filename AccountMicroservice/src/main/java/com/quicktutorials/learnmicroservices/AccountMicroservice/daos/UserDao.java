@@ -17,4 +17,5 @@ https://docs.spring.io/spring-data/jpa/docs/1.6.0.RELEASE/reference/html/jpa.rep
     @Override
     Optional<User> findById(String s);
     //Spring automaticamente capisce che dovrà trovare L'user tramite L'id, nella tabella User avendola Specificata sopra
+    //Nota optional vuol dire eventualmente, non è detto che mi ritorni un risultato User, potrebbe non trovarlo
 }
